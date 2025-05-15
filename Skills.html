@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>About</title>
+    <link rel="stylesheet" href="style33.css">
+    <link 
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <span>ILYLEEN</span>
+            </div>
+            <div class="links">
+                <div class="link"><a href="index.html">Home</a></div>
+                <div class="link"><a href="About.html">About</a></div>
+                <div class="link"><a href="#">Projects</a></div>
+                <div class="link"><a href="Services.html">Services</a></div>
+                <div class="link"><a href="Socials.html">Socials</a></div>
+                <div class="link contact-btn"><a href="Contacts.html">Contacts</a>
+                </div>
+            <i class="fa-solid fa-bars hambrug" onclick="hamburg()"></i>
+            </div>
+        </nav>
+            <section>
+                <div class="main-container">
+                    <div class="video-section">
+                        <h2 class="video-title">💃Dance 🌺🪕</h2>
+                        <video src="Dance video.mp4" width="500" height="500" controls>DANCE</video>
+                    </div>
+
+                    <div class="card-section">
+                        <h2 class="card-title">My Drawings <span>ִֶָ. ..𓂃 ࣪ ִֶָ ʚଓ་༘࿐</span></h2>
+                    </div>
+
+                    <div class="card-container">
+                        <div class="card">
+                          <img src="zhongguo eaaa.jpg" alt="Image">
+                          <div class="card-content">
+                            <h3>Chinese Girl 🪭🏮🪷</h3>
+                            <p>I was inspired by the time I was wearing
+                                a Hanfu at Gankeng Hakka Town, China.
+                                I loved how the fabric moved from
+                                every sway I do.
+                            </p>
+                          </div>
+                        </div>
+                      
+                        <div class="card">
+                          <img src="girlie.jpg" alt="Image">
+                          <div class="card-content">
+                            <h3>An AI Drawing 🎀💟</h3>
+                            <p>I was scrolling TikTok and stumbled upon
+                                a very pretty drawing and wanted to recreate it.
+                                Even though it was created by AI I think it's still
+                                pretty~
+                            </p>
+                          </div>
+                        </div>
+                    </div>
+
+
+                    <div class="Comic-container">
+                        <div class="comic-slider">
+                            <div class="slides">
+                              <img src="Comic 1.jpg" class="slide active" alt="Panel 1">
+                              <img src="Comic 2.jpg" class="slide" alt="Panel 2">
+                              <img src="Comic 3.jpg" class="slide" alt="Panel 3">
+                            </div>
+                            <div class="controls">
+                              <button onclick="prevSlide()">‹</button>
+                              <button onclick="nextSlide()">›</button>
+                            </div>
+                          </div>
+                    </div>
+            </section>
+                <script>
+
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+                function hamburg(){
+                    const navbar = document.querySelector(".dropdown")
+                    navbar.style.transform = "translateY(0px)"
+                }
+                function cancel(){
+                    const navbar = document.querySelector(".dropdown")
+                    navbar.style.transform = "translateY(-500px)"
+                }
+            </script>
+</body>
+</html>
